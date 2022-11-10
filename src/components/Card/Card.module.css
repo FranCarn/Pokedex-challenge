@@ -1,0 +1,104 @@
+* {
+  transition: all 0.3s;
+}
+
+.Card {
+  background: #555555c5;
+  border-color: #fff;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 10px;
+  color: rgb(248, 227, 198);
+  display: flex;
+  width: 350px;
+  margin: 20px auto;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+}
+
+.Card__types {
+  display: flex;
+  justify-content: space-between;
+}
+
+.Card__type {
+  padding: 5px 10px;
+  margin: 10px 10px 10px 0;
+  border-radius: 5px;
+  background: cyan;
+  color: #fff;
+}
+
+.Card__name {
+  text-align: center;
+  text-transform: capitalize;
+  font-weight: 800;
+}
+
+.Card__info {
+  flex-direction: column;
+  width: 90%;
+}
+
+.Card__data {
+  padding-bottom: 10px;
+}
+.Card__data > * {
+  display: flex;
+  width: 100%;
+  flex-wrap: wrap;
+  text-align: start;
+  justify-content: flex-start;
+}
+
+.title {
+  font-weight: 700;
+  margin: 6px 0px;
+  text-decoration: underline;
+}
+
+.dropdown {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  cursor: pointer;
+}
+.dropdown span {
+  font-weight: 700;
+  text-decoration: underline;
+}
+
+img {
+  width: 230px;
+  height: 230px;
+}
+ul {
+  display: flex;
+  flex-direction: column;
+}
+ul li {
+  margin-left: 10px;
+}
+.open {
+  transform: rotate(180deg);
+  transition: all 0.5s;
+}
+.Card__Evolutions {
+  padding: 5px 10px;
+  border-radius: 5px;
+  margin: 10px 0px;
+  background: rgba(0, 0, 0, 0.2);
+}
+.Card__Evolutions:hover {
+  background: rgba(0, 0, 0, 0.411);
+}
+.Card__EvolutionsContainer {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  gap: 10px;
+  margin: 10px 0px;
+}
+.active {
+  color: rgb(194, 197, 20);
+}

@@ -1,0 +1,137 @@
+@import url("https://fonts.googleapis.com/css2?family=Poor+Story&display=swap");
+
+* {
+  font-family: "Poor Story", cursive;
+  font-size: 22px;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  --animate-duration: 300ms;
+}
+
+a {
+  text-decoration: none;
+}
+body {
+  background-color: #2e2e2e;
+}
+
+/* LOGIN  */
+
+form > * {
+  color: rgb(248, 227, 198);
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  align-items: center;
+}
+
+.form__container {
+  margin: 100px auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 300px;
+  height: 300px;
+  border-radius: 20px;
+  background-color: #2e2e2eb7;
+  backdrop-filter: blur(5px);
+}
+
+.login__background {
+  position: absolute;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background: url(https://wallpapercave.com/wp/wp9135463.jpg) no-repeat;
+  background-size: cover;
+}
+
+.input__container > * {
+  margin: 5px;
+  text-indent: 5px;
+}
+.login__button {
+  background-color: #2e2e2e;
+  border-radius: 15px;
+  padding: 5px 30px;
+  border: #2e2e2e 1px solid;
+}
+.login__button:hover {
+  background-color: rgb(248, 227, 198);
+  color: #2e2e2e;
+  letter-spacing: 2px;
+  transition: all 0.3s;
+  cursor: pointer;
+  scale: 1.1;
+}
+.login__button:disabled {
+  cursor: auto;
+  color: rgb(97, 97, 97);
+}
+.login__button:disabled:hover {
+  scale: 1;
+  letter-spacing: 0;
+  background-color: #2e2e2e;
+}
+
+/*  PAGE  */
+
+.grid__container {
+  padding-top: 20px;
+  width: 70%;
+  display: grid;
+  margin: 0 auto;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  grid-gap: 10px;
+}
+
+.btn {
+  display: flex;
+  justify-content: center;
+  margin: 20px 0;
+}
+
+.btn button {
+  border-style: none;
+  padding: 5px 10px;
+  margin-right: 10px;
+  border-radius: 5px;
+  background: #30a7d7;
+  color: #fff;
+  font-size: 1em;
+}
+
+.btn button:disabled {
+  scale: 1;
+  background-color: #2890b9b4;
+  cursor: auto;
+}
+
+.loader {
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  left: 0;
+  right: 0;
+}
+
+.searchbar {
+  text-align: end;
+  margin: 5px 10px;
+  color: rgb(248, 227, 198);
+}
+.searchbar > * {
+  margin: 2px;
+  border-radius: 15px;
+  text-indent: 10px;
+  outline: none;
+  border: none;
+}
+.searchbar input:focus {
+  outline: 2px solid #e9ba00;
+}
