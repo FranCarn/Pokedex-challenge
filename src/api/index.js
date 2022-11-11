@@ -1,7 +1,7 @@
 export {
-  getPokemon,
+  getPokemonById,
   getAllPokemon,
   getPokemonMoves,
-  getSinglePokemon,
+  getPokemonByName,
   getEvolutions,
 } from "./pokemonAPI";

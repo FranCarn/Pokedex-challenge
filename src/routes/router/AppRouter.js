@@ -1,6 +1,6 @@
 import React from "react";
 import { Route, Routes } from "react-router-dom";
-import { Login } from "../../auth/pages/Login";
+import { Login } from "../../page";
 import { PokeRoutes } from "../PokeRoutes";
 import { PrivateRoute, PublicRoute } from "./";
 

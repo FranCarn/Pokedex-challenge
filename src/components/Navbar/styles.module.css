@@ -1,3 +1,12 @@
+* {
+  font-family: "Poor Story", cursive;
+  font-size: 22px;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  --animate-duration: 300ms;
+}
+
 .Navbar {
   display: flex;
   justify-content: space-between;

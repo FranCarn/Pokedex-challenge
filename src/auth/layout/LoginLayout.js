@@ -1,6 +1,6 @@
 import React from "react";
 import PropTypes from "prop-types";
-import styles from "../../App.module.css";
+import styles from "../../page/Login/Login.module.css";
 export const LoginLayout = ({ children }) => {
   return (
     <div className={styles.login__container}>

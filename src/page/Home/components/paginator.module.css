@@ -1,0 +1,21 @@
+.btn {
+  display: flex;
+  justify-content: center;
+  margin: 20px 0;
+}
+
+.btn button {
+  border-style: none;
+  padding: 5px 10px;
+  margin-right: 10px;
+  border-radius: 5px;
+  background: #30a7d7;
+  color: #fff;
+  font-size: 1em;
+}
+
+.btn button:disabled {
+  scale: 1;
+  background-color: #2890b9b4;
+  cursor: auto;
+}

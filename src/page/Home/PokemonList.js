@@ -1,21 +1,21 @@
 import React, { useEffect, useState } from "react";
-import { Paginator, Loader } from "../components";
-import { ItemList } from "../components/ItemList";
-import PropTypes from "prop-types";
-import styles from "../App.module.css";
+import { Loader } from "../../components";
+import { ItemList, Paginator } from "./components/";
+import styles from "./home.module.css";
+import { usePokeApp } from "../../hooks/usePokeApp";
 
-export const PokeApp = ({ pokemon }) => {
+export const PokemonList = () => {
   const [search, setSearch] = useState("");
   const [searchedPokemon, setSearchedPokemon] = useState([]);
   const { prevUrl, prevPage, nextUrl, nextPage, pokemonData, loading } =
-    pokemon;
+    usePokeApp();
 
   useEffect(() => {
     setSearch("");
     setSearchedPokemon(pokemonData);
   }, [pokemonData]);
   useEffect(() => {
-    if (!search) return;
+    if (!search) return setSearchedPokemon(pokemonData);
     const filterArray = pokemonData.filter((pokemon) =>
       pokemon.species.name.includes(search.toLowerCase())
     );
@@ -24,7 +24,7 @@ export const PokeApp = ({ pokemon }) => {
 
   return (
     <div className="animate__animated animate__fadeIn">
-      <div>
+      <div className={styles.searchbarContainer}>
         <div className={styles.searchbar}>
           <i className="fa-solid fa-magnifying-glass" />
           <input
@@ -35,25 +35,19 @@ export const PokeApp = ({ pokemon }) => {
           />
         </div>
         {loading && <Loader speed={2} />}
-      </div>
-      <div className={styles.grid__container}>
-        {search
-          ? searchedPokemon.map((pokemon) => (
-              <ItemList key={pokemon.name} pokemon={pokemon} />
-            ))
-          : pokemonData.map((pokemon) => (
-              <ItemList key={pokemon.name} pokemon={pokemon} />
-            ))}
+        <div className={styles.grid__container}>
+          {searchedPokemon.map((pokemon) => (
+            <ItemList key={pokemon.name} pokemon={pokemon} />
+          ))}
+        </div>
       </div>
       <Paginator
         prevUrl={prevUrl}
         nextUrl={nextUrl}
         prevPage={prevPage}
         nextPage={nextPage}
+        loading={loading}
       />
     </div>
   );
-};
-PokeApp.propTypes = {
-  pokemon: PropTypes.object.isRequired,
 };

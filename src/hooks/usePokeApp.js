@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { getAllPokemon, getPokemon } from "../api";
+import { getAllPokemon, getPokemonById } from "../api";
 
 export const usePokeApp = () => {
   const [pokemonData, setPokemonData] = useState([]);
@@ -40,7 +40,7 @@ export const usePokeApp = () => {
   const getPokemonsIMG = async (data) => {
     let _pokemonData = await Promise.all(
       data.map(async (pokemon) => {
-        let pokeData = await getPokemon(pokemon);
+        let pokeData = await getPokemonById(pokemon);
         return pokeData;
       })
     );

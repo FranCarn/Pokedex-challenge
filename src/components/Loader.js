@@ -1,6 +1,6 @@
 import { ClipLoader } from "react-spinners";
 import PropTypes from "prop-types";
-import styles from "../App.module.css";
+import styles from "./Loader.module.css";
 export const Loader = ({ speed }) => {
   return (
     <div className={styles.loader}>

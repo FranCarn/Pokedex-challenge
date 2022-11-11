@@ -1,4 +1,10 @@
 * {
+  font-family: "Poor Story", cursive;
+  font-size: 22px;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  --animate-duration: 300ms;
   transition: all 0.3s;
 }
 
@@ -95,8 +101,10 @@ ul li {
 .Card__EvolutionsContainer {
   display: flex;
   flex-direction: row;
+  flex-wrap: wrap;
   justify-content: space-around;
-  gap: 10px;
+  width: 300px;
+  gap: 20px 5px;
   margin: 10px 0px;
 }
 .active {

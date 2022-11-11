@@ -1,8 +1,8 @@
 import React, { useEffect } from "react";
-import { useLogin } from "../hooks/useLogin";
-import { LoginLayout } from "../layout";
-import styles from "../../App.module.css";
-import { Loader } from "../../components/Loader";
+import { useLogin } from "../../auth/hooks/useLogin";
+import { LoginLayout } from "../../auth/layout";
+import styles from "./Login.module.css";
+import { Loader } from "../../components";
 
 export const Login = () => {
   const {

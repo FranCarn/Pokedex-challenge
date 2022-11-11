@@ -1,0 +1,18 @@
+* {
+  font-family: "Poor Story", cursive;
+  font-size: 22px;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  --animate-duration: 300ms;
+}
+
+.loader {
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  top: 20%;
+  left: 0;
+  right: 0;
+}
